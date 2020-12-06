@@ -695,6 +695,7 @@ public class FootballClub{
 	}
 	/**
 	 * show the coaches in their offices <br> 
+	 * @return message with the office matrix 
 	 */	
 	public String showOffice(){
         String message = "";
