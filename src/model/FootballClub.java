@@ -31,6 +31,7 @@ public class FootballClub{
 		teams[0]=new Team ("TeamA");
 		teams[1]=new Team ("TeamB");
 		int [][]lineup = new int [Lineup.ROWS_IN__LINEUP][Lineup.COLUMNS_IN_LINEUP];
+		this.offices=new Coach [6][6];
 	}
 
 	
@@ -674,22 +675,41 @@ public class FootballClub{
 	}
 
 	/**
-	 * set the coaches int their offices <br> 
+	 * set the coaches in their offices <br> 
 	 */	
 	public void locateInTheOffices(){
-        boolean out = false;
+        boolean finder = false;
         for(int i = 0; i<employees.size();i++){
             if((employees.get(i) instanceof Coach)){
-                for(int j = 0; j < offices.length && !out; j = j+2 ){
-                    for(int k = 0; j < offices[0].length && !out; k = k+2){
+                for(int j = 0; j < offices.length && !finder; j = j+2 ){
+                    for(int k = 0; j < offices[0].length && !finder; k = k+2){
                         if(offices[j][k] == null){
                             offices[j][k] = ((Coach)employees.get(i));
-                            out = true;
+                            finder = true;
                         }
                     }
                 }
             }
-            out = false;
+            finder = false;
         }
 	}
+	/**
+	 * show the coaches in their offices <br> 
+	 */	
+	public String showOffice(){
+        String message = "";
+        for (int i=0; i< offices.length; i++ ) {
+            for (int j = 0; j < offices[0].length; j++) {
+                if(offices[i][j] != null){
+                    message +=offices[i][j].getName()+"\t";
+            }
+            else{
+                message +="VACIO\t";
+            }
+                }
+                
+                message+="\n";
+            }
+            return message;
+    }
 	}

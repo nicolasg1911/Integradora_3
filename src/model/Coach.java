@@ -22,6 +22,7 @@ public class Coach extends Employee{
 		this.yearsExperience = yearsExperience;
 	}
 
+
 	/**
 	 * show coach information<br>
 	 * <b> pre: there has to be a coach already defined </b> 
@@ -43,3 +44,4 @@ public class Coach extends Employee{
 	}
 
 }
+

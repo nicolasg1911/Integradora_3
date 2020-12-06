@@ -35,7 +35,7 @@ public class Main{
 		int option=0;
 
 		System.out.println(
-			"Select an option tostart\n"+
+			"Select an option to start\n"+
 			"(1) to register an employee\n"+
 			"(2) to dismiss an employee\n"+
 			"(3) to add an employee to a team\n"+
@@ -97,8 +97,9 @@ public class Main{
 			showLineup();
 			break;
 		case 10:
+			System.out.println(club.showOffice());
 
-			break;
+		break;
 		case 11:
 
 			break;
