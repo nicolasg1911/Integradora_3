@@ -45,10 +45,8 @@ public class Main{
 			"(7) to show all the employees\n" +  
 			"(8) to show informtion of a team\n" +
 			"(9) to show the line up\n" +
-			"(10) to \n"+// show players in the dressers
-			"(11) to \n"+//show dressers
-			"(12) to \n"+//set choaches in their office
-			"(13) to \n"+//show choaches in their office
+			"(10) to manage offices\n"+
+			"(11) to manage dressers\n"+
 			"(0) Exit"
 					);
 		option= sc.nextInt();
@@ -125,9 +123,10 @@ public class Main{
 
 		System.out.println("");
 		System.out.println("");	
-		System.out.println("**************************");
-		System.out.println("write the club's name");
-		System.out.println("**************************");
+		System.out.println("**************************************");
+		System.out.println("*Welcome to the Football club manager*");
+		System.out.println("********write the club's name*********");
+		System.out.println("**************************************");
 		name = sc.nextLine();
 		System.out.println("Enter the club's NIT");
 		nit = sc.nextLine();
@@ -175,7 +174,6 @@ public class Main{
 					case 2:
 						System.out.println("is he a former football player? yes / no");
 						String exPlayer = sc.nextLine();
-						//if(exPlayer.equalsIgnoreCase("yes"))
 						System.out.println("what is it expertise?(OFFENSIVE, DEFENSIVE, POSSESSION,LAB_PLAY)");
 						String expertise = sc.nextLine().toUpperCase();
 						System.out.println(club.addEmployee( yearsExperience,  name,  id,  salary,  exPlayer,  expertise));

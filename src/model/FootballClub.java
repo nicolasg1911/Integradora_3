@@ -672,5 +672,83 @@ public class FootballClub{
 	return message;
 	}
 	
+	/**
+	 * add offices to the club<br> 
+	 * @return the offices matrix
+	 */	
+	public String addoffice(){
+        ArrayList <Employee> coaches; coaches =new ArrayList<Employee>();
+        int [][]office = new int [6][6];
+        boolean limit = false;
+        int x = 0;
+        for(int i=0; i <coaches.size() && !limit; i++) {
+            if (coaches.get(i) != null) {
+                
+                    office[0][x]=1;
+                    x+=2;
+                    if(x ==6) {
+                        limit = true;    
+                    }
+        	}
+        }
+        int y = 1;
+        limit = false;
+        for(int i=0; i <coaches.size() && !limit; i++) {
+            if (coaches.get(i) != null) {
+                    office[1][y]=1;
+                    y+=2;
+                    if(y ==7) {
+                        limit = true;    
+                    }   
+            }
+        }
+        int z =0;
+        limit = false;
+        for(int i=0; i <coaches.size() && !limit; i++) {
+            if (coaches.get(i) != null) {
+                
+                    office[2][z]=1;
+                    z+=2;
+                    if(z==6) {
+                        limit = true;    
+                    } 
+            }
+        }
+        int n =1;
+        limit = false;
+        for(int i=0; i <coaches.size() && !limit; i++) {
+            if (coaches.get(i) != null) {               
+                    office[3][n]=1;
+                    n+=2;
+                    if(n==7) {
+                        limit = true;    
+                    }                   
+            }
+        }
+        int h =0;
+        limit = false;
+        for(int i=0; i <coaches.size() && !limit; i++) {
+            if (coaches.get(i) != null) {   
+                    office[4][h]=1;
+                    h+=2;
+                    if(h==6) {
+                        limit = true;    
+                    }
+            }
+        }
+        int j =1;
+        limit = false;
+        for(int i=0; i <coaches.size() && !limit; i++) {
+            if (coaches.get(i) != null) {       
+                    office[5][j]=1;
+                    j+=2;
+                    if(j==7) {
+                        limit = true;    
+                    }
+                }    
+        }
+        String message = office.toString();
+        return  message;
+    }
 	
 }
